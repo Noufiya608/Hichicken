@@ -7,7 +7,7 @@ export default function Login() {
     email: "",
     password: ""
   });
-
+const [showPassword, setShowPassword] = useState("")
   const [message, setMessage] = useState(""); // ✅ message state
   const [isError, setIsError] = useState(false); // ✅ error/success control
 
@@ -51,13 +51,19 @@ export default function Login() {
           required
         />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          onChange={handleChange}
-          required
-        />
+        {/* 🔹 Password with eye icon */}
+        <div className="password-field">
+          <input
+            type={showPassword ? "text" : "password"}
+            name="password"
+            placeholder="Password"
+            onChange={handleChange}
+            required
+          />
+          <span onClick={() => setShowPassword(!showPassword)}>
+            {showPassword ? "🙈" : "👁️"}
+          </span>
+        </div>
 
         <button>Login</button>
 

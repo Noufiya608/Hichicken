@@ -8,6 +8,7 @@ export default function Forgot() {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [showPassword, setShowPassword] = useState("")
 
   // 🔹 Send OTP
   const sendOtp = async () => {
@@ -30,7 +31,7 @@ export default function Forgot() {
       });
 
       alert("✅ Password updated");
-      window.location.href = "/login";
+      window.location.href = "/";
 
     } catch (err) {
       alert(err.response?.data?.message || "Reset failed");
@@ -57,11 +58,21 @@ export default function Forgot() {
             placeholder="Enter OTP"
             onChange={(e) => setOtp(e.target.value)}
           />
+          {/* 🔹 Password with eye icon */}
+        <div className="password-field">
           <input
-            placeholder="New Password"
-            type="password"
+            type={showPassword ? "text" : "password"}
+            name="password"
+            placeholder="Password"
             onChange={(e) => setNewPassword(e.target.value)}
+            required
           />
+          <span onClick={() => setShowPassword(!showPassword)}>
+            {showPassword ? "🙈" : "👁️"}
+          </span>
+        </div>
+           
+          
           <button onClick={resetPassword}>Reset Password</button>
         </>
       )}

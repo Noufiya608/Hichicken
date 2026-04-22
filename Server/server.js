@@ -9,6 +9,7 @@ import priceRoutes from "./ROUTES/priceRoutes.js"
 import orderRoutes from "./ROUTES/orderRoutes.js"
 import payRoutes from "./ROUTES/payRoutes.js"
 import authRoutes from "./ROUTES/authRoutes.js"
+import contactRoutes from "./ROUTES/contactRoutes.js"
 
  
 
@@ -19,6 +20,8 @@ import authRoutes from "./ROUTES/authRoutes.js"
  app.use("/api/order",orderRoutes);
 app.use("/api/payment",payRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/contact", contactRoutes);
+
 
  mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log("Mongodb connected")

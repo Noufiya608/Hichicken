@@ -1,11 +1,11 @@
 import { Resend } from "resend";
 
-const resend = new Resend("re_LtpdTYFT_E3BVZvyDCkhEj5LHFHRMmq6T");
+const resend = new Resend("re_aARYaTLy_9K6xZijJQt6VdAHNebkxXGHz");
 
 const sendEmail = async (to, otp) => {
   try {
     const response = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Hichicken <noreply@hichicken.in>",
       to: to,
       subject: "Your OTP Code",
       html: `

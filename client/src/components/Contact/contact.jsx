@@ -7,6 +7,7 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import axios from "axios";
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -14,13 +15,19 @@ export default function Contact() {
     message: ""
   });
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const submit = async (e) => {
+  e.preventDefault();
 
-  const submit = (e) => {
-    e.preventDefault();
+  try {
+    await axios.post("http://localhost:5000/api/contact", form);
+
     alert("✅ Message sent successfully!");
-  };
+    setForm({ name: "", email: "", message: "" });
+
+  } catch (error) {
+    alert("❌ Failed to send message");
+  }
+};
 
   return (
     <>
