@@ -47,7 +47,7 @@ const Shop = () => {
         <nav>
           <a href="/home">Home</a>
           <a href="/order">Shop</a>
-          <a href="#">About</a>
+          <a href="/About">About</a>
           <a href="/contactus">Contact</a>
         </nav>
         <div className="cart">🛒</div>

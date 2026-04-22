@@ -13,6 +13,7 @@ import AdminDashboard from './components/Admin/AdminDashboard.jsx';
 import AdminLogin from './components/Admin/AdminLogin.jsx';
 import AdminRoute from './components/Admin/AdminRoute.jsx';
 import Contact from './components/Contact/contact.jsx';
+import About from './components/Aboutus/About.jsx';
 
 function App() {
   
@@ -29,6 +30,7 @@ function App() {
          <Route path="/forgot" element={<Forgot />} />
          <Route path="/adminlogin" element={<AdminLogin />} /> 
           <Route path="/contactus" element={<Contact />} /> 
+          <Route path="/About" element={<About />} /> 
 <Route
   path="/admin"
   element={

@@ -35,7 +35,7 @@ const Money = () => {
         <nav>
           <a href="/home">Home</a>
           <a href="/order">Shop</a>
-          <a href="#">About</a>
+          <a href="/About">About</a>
           <a href="/contactus">Contact</a>
         </nav>
         <IconContext.Provider value={{ size:"2em",color: "maroon" }}>
