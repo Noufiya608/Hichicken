@@ -114,7 +114,7 @@ const trend = getTrend();
           {products.map((item) => (
             <div className="card" key={item._id}>
               <img
-                src={`http://localhost:5000/uploads/${item.image}`}
+                src={`https://hichicken1.onrender.com/uploads/${item.image}`}
                 alt={item.name}
               />
               <h4>{item.name}</h4>
