@@ -16,7 +16,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/admin/orders",
+        "https://hichicken1.onrender.com//api/admin/orders",
         {
           headers: {
             Authorization: `Bearer ${token}`, // 🔐 send token

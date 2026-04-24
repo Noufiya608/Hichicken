@@ -33,7 +33,7 @@ const Money = () => {
   // 🔥 Products
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://hichicken1.onrender.com/api/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);

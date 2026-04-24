@@ -45,7 +45,7 @@ const Payment = () => {
           try {
             // 3️⃣ Verify payment
             const verifyRes = await axios.post(
-              "http://localhost:5000/api/payment/verify",
+              "https://hichicken1.onrender.com/api/payment/verify",
               response
             );
 
