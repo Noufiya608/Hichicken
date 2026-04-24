@@ -14,7 +14,10 @@ import productRoutes from "./ROUTES/productRoutes.js"
 
  
 
- app.use(cors());
+ app.use(cors({
+  origin: "https://hichicken2.onrender.com",
+  credentials: true
+}));
  app.use(express.json());
 
  app.use("/api/price",priceRoutes);
