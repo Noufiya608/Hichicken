@@ -1,6 +1,6 @@
 import Razorpay from "razorpay";
 import crypto from "crypto";
-
+import Pay from "../MODEL/payModel.js";
 
 // 🔍 DEBUG: Check ENV values
 console.log("🔑 RAZORPAY KEY ID:", process.env.RAZORPAY_KEY_ID);

@@ -10,8 +10,8 @@ export default function About() {
           <header className="navbar">
             <h2 className="logo">HI CHICKEN</h2>
             <nav>
-              <a href="/home">Home</a>
-              <a href="/order">Shop</a>
+              <a href="/">Home</a>
+           
               <a href="/About">About</a>
               <a href="/contactus">Contact</a>
             </nav>
@@ -33,9 +33,7 @@ export default function About() {
         <div className="about-text">
           <h2>Who We Are</h2>
           <p>
-            HI CHICKEN is a trusted chicken delivery service committed to
-            providing fresh, clean, and halal chicken directly to your home.
-            We ensure the highest standards of hygiene and quality in every order.
+           ഇനി ശുദ്ധമായ ചിക്കൻ തേടി നിങ്ങൾ എവിടെയും പോകേണ്ടതില്ല. പ്രകൃതിദത്തവും ആരോഗ്യകരവുമായ രീതിയിൽ തയ്യാറാക്കിയ ചിക്കൻ നിങ്ങളുടെ വീട്ടുപടിക്കൽ ഞങ്ങൾ എത്തിക്കുന്നു
           </p>
 
           <h2>Our Mission</h2>
@@ -47,10 +45,10 @@ export default function About() {
 
           <h2>Why Choose Us</h2>
           <ul>
-            <li>100% Fresh & Hygienic</li>
-            <li>Halal Certified</li>
-            <li>Fast Home Delivery</li>
-            <li>Affordable Pricing</li>
+            <li>പരമ്പരാഗതമായ ശുദ്ധി (Ethical Purity): വിശ്വാസ്യതയോടെയും എല്ലാവിധ ശുദ്ധിനിയമങ്ങൾ പാലിച്ചും മാത്രമാണ് ഞങ്ങൾ ഓരോ ചിക്കനും തയ്യാറാക്കുന്നത്</li>
+            <li>ഓരോ ദിവസവും പുതുമയോടെ: ദിവസേന പുതുതായി തയ്യാറാക്കിയ ഫ്രഷ് ചിക്കൻ മാത്രമാണ് ഞങ്ങൾ വിതരണം ചെയ്യുന്നത്.</li>
+            <li>സൗജന്യ ഡെലിവറി: അധിക ചിലവുകളെക്കുറിച്ച് ഇനി ആശങ്ക വേണ്ട; ഡെലിവറി ചാർജില്ലാതെ തന്നെ നിങ്ങളുടെ ഇഷ്ടസ്ഥലത്ത് ഞങ്ങൾ ചിക്കൻ എത്തിക്കും</li>
+            <li>എളുപ്പത്തിൽ ഓർഡർ ചെയ്യാം: സമയം ലാഭിക്കാം! വെബ്സൈറ്റിലെ QR കോഡ് സ്കാൻ ചെയ്തുകൊണ്ട് നിങ്ങൾക്ക് നിമിഷങ്ങൾക്കുള്ളിൽ ഓർഡർ നൽകാവുന്നതാണ്</li>
           </ul>
         </div>
 

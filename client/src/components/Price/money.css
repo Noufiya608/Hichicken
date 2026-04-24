@@ -91,6 +91,8 @@
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   padding: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .price-section h2 {

@@ -6,24 +6,32 @@ import sendEmail from "../Utils/sendEmail.js";
 // 🔹 Signup
 export const signup = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
-
-    const exist = await User.findOne({ email });
-    if (exist) return res.status(400).json({ message: "User already exists" });
+    const { name, email, password, address, guestaddress } = req.body;
+// check existing user
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "User already exists" });
+    }
 
     const hash = await bcrypt.hash(password, 10);
 
-    const user = await User.create({
+    const newUser = new User({
       name,
       email,
       password: hash,
-       
+      address,
+      guestaddress
     });
 
-    res.json({ message: "Signup success", user });
+    await newUser.save();
 
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(201).json({
+      message: "User registered successfully",
+      user: newUser
+    });
+
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
 
@@ -181,3 +189,48 @@ export const makeAdmin = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+//Create User (Signup)
+  
+
+
+//Update User
+export const updateUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const updatedUser = await User.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true }
+    );
+
+    res.status(200).json(updatedUser);
+
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+//Delete User
+export const deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    await User.findByIdAndDelete(id);
+
+    res.status(200).json({ message: "User deleted" });
+
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
+export const getMyProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select("-password");
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+

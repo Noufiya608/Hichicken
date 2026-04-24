@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Auth.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [form, setForm] = useState({
     email: "",
     password: ""
   });
+  const navigate = useNavigate();
+const location = useLocation();
 const [showPassword, setShowPassword] = useState("")
   const [message, setMessage] = useState(""); // ✅ message state
   const [isError, setIsError] = useState(false); // ✅ error/success control
@@ -23,15 +26,20 @@ const [showPassword, setShowPassword] = useState("")
         form
       );
 
-      localStorage.setItem("token", res.data.token);
+    localStorage.setItem("token", "userLoggedIn");
+
+const orderData = location.state;
+
+if (orderData) {
+  navigate("/pay", { state: orderData });
+} else {
+  navigate("/home");
+}
 
       setIsError(false);
       setMessage("✅ Login successful");
 
-      // ⏳ redirect after 1.5 seconds
-      setTimeout(() => {
-        window.location.href = "/home";
-      }, 1500);
+   
 
     } catch (err) {
       setIsError(true);

@@ -14,6 +14,8 @@ import AdminLogin from './components/Admin/AdminLogin.jsx';
 import AdminRoute from './components/Admin/AdminRoute.jsx';
 import Contact from './components/Contact/contact.jsx';
 import About from './components/Aboutus/About.jsx';
+import ProtectedRoute from './ProtectedRoute.jsx';
+
 
 function App() {
   
@@ -22,15 +24,23 @@ function App() {
     <Router>
       
       <Routes>
-        <Route path="/home" element={<Price />} />
+        <Route path="/" element={<Price />} />
          <Route path="/order" element={<Order />} />
-         <Route path="/pay" element={<Payment />} />
+      <Route
+  path="/pay"
+  element={
+    <ProtectedRoute>
+      <Payment />
+    </ProtectedRoute>
+  }
+/>
          <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
          <Route path="/forgot" element={<Forgot />} />
          <Route path="/adminlogin" element={<AdminLogin />} /> 
           <Route path="/contactus" element={<Contact />} /> 
           <Route path="/About" element={<About />} /> 
+      
 <Route
   path="/admin"
   element={
