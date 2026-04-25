@@ -4,6 +4,7 @@ import "./money.css";
 import { useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons/lib";
+import { BASE_URL } from "../../config";
 
 
 const Money = () => {
@@ -20,7 +21,7 @@ const Money = () => {
   useEffect(() => {
     const fetchPrice = async () => {
       try {
-        const res = await axios.get("https://hichicken1.onrender.com/api/price/today");
+        const res = await axios.get(`${BASE_URL}/api/price/today`);
         setPrice(res.data?.pricePerKg || 0);
       } catch (err) {
         console.error(err);
