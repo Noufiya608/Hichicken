@@ -11,6 +11,7 @@ const Money = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [price, setPrice] = useState(null);
+    
 
   // 👉 Navigate with full product data
   const handleOrder = (item) => {
@@ -114,10 +115,10 @@ const trend = getTrend();
         <div className="product-grid">
           {products.map((item) => (
             <div className="card" key={item._id}>
-              <img
-                src={`https://hichicken1.onrender.com/uploads/${item.image}`}
+             
+               <img src={item.image} alt={item.name} />
                 alt={item.name}
-              />
+              
               <h4>{item.name}</h4>
               <p>₹{item.price}</p>
 

@@ -18,8 +18,6 @@ if (!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath);
 }
 
-// ✅ STATIC SERVE (VERY IMPORTANT)
-app.use("/uploads", express.static(uploadPath));
 
 // Middleware
 app.use(cors({

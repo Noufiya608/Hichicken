@@ -15,7 +15,7 @@ export const addProduct = async (req, res) => {
     const product = new Product({
       name,
       price,
-      image: req.file.filename
+     image: req.file.path 
     });
 
     await product.save();
