@@ -25,7 +25,7 @@ const handleChange = (e) => {
 
   try {
     await axios.post(
-      "https://hichicken1.onrender.com/api/contact",
+      "https://hichicken1.onrender.com/api/contact/sendme",
       form,
       { timeout: 15000 }
     );
