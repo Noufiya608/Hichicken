@@ -68,20 +68,17 @@ const trend = getTrend();
           <a href="/contactus">Contact</a>
         </nav>
 
-        <IconContext.Provider value={{ size: "2em", color: "maroon" }}>
+        {/* <IconContext.Provider value={{ size: "2em", color: "maroon" }}>
         <div onClick={() => navigate("/profile")}>
   <CgProfile />
 </div>
-        </IconContext.Provider>
+        </IconContext.Provider> */}
       </header>
 
       {/* Hero */}
       <section className="hero">
         <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1>Fresh & Clean Chicken</h1>
-          <p>Delivered hygienically to your doorstep</p>
-        </div>
+
       </section>
 
       {/* Price */}
@@ -108,6 +105,49 @@ const trend = getTrend();
     <p>{price === null ? "Loading..." : `₹${price}`}</p>
   </div>
 
+</section>
+{/* Trust Highlights */}
+<section className="trust-section">
+  <div className="trust-box">
+    <img src="/ChatGPT Image May 18, 2026, 01_34_24 PM.png" alt="Fresh" />
+    <h3>100% Fresh</h3>
+    <p>Fresh chicken sourced daily for your family.</p>
+  </div>
+
+  <div className="trust-box">
+    <img src="/ChatGPT Image May 18, 2026, 01_44_43 PM.png" alt="Hygienic" />
+    <h3>Hygienic Cutting</h3>
+    <p>Clean and safely processed meat.</p>
+  </div>
+
+  <div className="trust-box">
+    <img src="/ChatGPT Image May 18, 2026, 01_37_30 PM.png" alt="Delivery" />
+    <h3>Fast Delivery</h3>
+    <p>Quick delivery by our Partners.</p>
+  </div>
+
+  <div className="trust-box">
+    <img src="/ChatGPT Image May 18, 2026, 01_38_34 PM.png" alt="Quality" />
+    <h3>Premium Quality</h3>
+    <p>Best cuts with trusted quality.</p>
+  </div>
+</section>
+
+{/* About Short Section */}
+<section className="home-about">
+  <div className="home-about-text">
+    <h2>Fresh Chicken Delivered To Your Doorstep</h2>
+    <p>
+      HI CHICKEN provides fresh, clean, and premium quality chicken meat
+      for every home. We focus on hygiene, freshness, and fast delivery
+      so you can order confidently anytime.
+    </p>
+    <button onClick={() => navigate("/About")}>Know More</button>
+  </div>
+
+  <div className="home-about-img">
+    <img src="/ChatGPT Image May 18, 2026, 01_39_53 PM.png" alt="Fresh Chicken Meat" />
+  </div>
 </section>
 
       {/* Products */}

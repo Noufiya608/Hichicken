@@ -26,7 +26,7 @@ export default function About() {
       {/* Hero Section */}
       <div className="about-hero">
         <h1>About Us</h1>
-        <p>Fresh & Hygienic Chicken Delivered to Your Doorstep</p>
+       
       </div>
 
       {/* Content Section */}

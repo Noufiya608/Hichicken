@@ -44,15 +44,15 @@ html, body {
 }
 /* Hero Section */
 .about-hero {
-  background: url("/heroimage.png") center/cover no-repeat;
-  height: 250px;
+  background: url("/ChatGPT Image May 18, 2026, 01_15_57 PM.png") center/cover no-repeat;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #ffe209;
   background-color: rgba(0,0,0,0.6);
-  background-blend-mode: darken;
+  
 }
 
 .about-hero h1 {
