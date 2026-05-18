@@ -77,7 +77,7 @@ const trend = getTrend();
 
       {/* Hero */}
       <section className="hero">
-        <div className="overlay"></div>
+        <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>Fresh & Clean Chicken</h1>
           <p>Delivered hygienically to your doorstep</p>
