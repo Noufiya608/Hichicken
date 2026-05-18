@@ -287,7 +287,7 @@ html, body {
 }
 /* FOOTER */
 .footer-wrapper {
-  background: #000000;
+  background: #ffffff;
   padding: 10px ;
   font-family: Arial, sans-serif;
 }
@@ -354,7 +354,7 @@ html, body {
 }
 
 .brand p {
-  color: #ffffff;
+  color: #000000;
 }
 
 .links h4 {
@@ -363,7 +363,7 @@ html, body {
 
 .links p {
   margin: 5px 0;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   transition: 0.3s;
 }
