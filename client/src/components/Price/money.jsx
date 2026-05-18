@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons/lib";
 import { BASE_URL } from "../../config";
-
+import { MdOutlineShowChart } from "react-icons/md";
+import { MdMultilineChart } from "react-icons/md";
+import { GiChicken } from "react-icons/gi";
 
 const Money = () => {
   const navigate = useNavigate();
@@ -45,9 +47,9 @@ const getTrend = () => {
   if (price === null) return null;
 
   if (price > yesterdayPrice) {
-    return { symbol: "📈", color: "green", text: "Increased" };
+    return { symbol: <MdOutlineShowChart />, color: "green", text: "Increased" };
   } else if (price < yesterdayPrice) {
-    return { symbol: "📉", color: "red", text: "Decreased" };
+    return { symbol: <MdMultilineChart />, color: "red", text: "Decreased" };
   } else {
     return { symbol: "➖", color: "gray", text: "No Change" };
   }
@@ -68,18 +70,70 @@ const trend = getTrend();
           <a href="/contactus">Contact</a>
         </nav>
 
-        {/* <IconContext.Provider value={{ size: "2em", color: "maroon" }}>
+        <IconContext.Provider value={{ size: "2em", color: "maroon" }}>
         <div onClick={() => navigate("/profile")}>
   <CgProfile />
 </div>
-        </IconContext.Provider> */}
+        </IconContext.Provider>
       </header>
 
-      {/* Hero */}
-      <section className="hero">
-        <div className="hero-overlay"></div>
+     <section className="premium-hero">
+  <div className="hero-left-content">
+    <div className="top-icon">
+      <span></span>
+      <p>🐓</p>
+      <span></span>
+    </div>
 
-      </section>
+    <h6>FRESH. HYGIENIC. DELICIOUS.</h6>
+
+    <h1>
+      <span>PREMIUM</span>
+      CHICKEN MEAT
+    </h1>
+
+    <div className="hero-line"></div>
+
+    <div className="hero-tags">
+      <p>Farm Fresh</p>
+      <span>|</span>
+      <p>100% Hygienic</p>
+      <span>|</span>
+      <p>Rich in Protein</p>
+    </div>
+
+    <div className="hero-features">
+      <div>
+        <div className="circle">🌿</div>
+        <p>FARM FRESH</p>
+      </div>
+
+      <div>
+        <div className="circle">🛡️</div>
+        <p>HYGIENICALLY<br />PROCESSED</p>
+      </div>
+
+      <div>
+        <div className="circle">🐓</div>
+        <p>100% QUALITY<br />ASSURED</p>
+      </div>
+
+      <div>
+        <div className="circle">💪</div>
+        <p>HIGH IN<br />PROTEIN</p>
+      </div>
+    </div>
+
+    <div className="hero-ribbon">
+      🐔 Good for your family. Best from our farm. 🐔
+    </div>
+  </div>
+
+  <div className="quality-badge">
+    <p>100%</p>
+    <span>PREMIUM<br />QUALITY</span>
+  </div>
+</section>
 
       {/* Price */}
      <section className="price-section">

@@ -1,6 +1,6 @@
 import express from "express";
 import upload from "../Middleware/productMiddleware.js";
-import { addProduct, getProducts } from "../CONTROLLER/productController.js";
+import { addProduct, deleteAllProducts, deleteProduct, getProducts } from "../CONTROLLER/productController.js";
 
 const router = express.Router();
 
@@ -8,5 +8,7 @@ const router = express.Router();
 router.post("/", upload.single("image"), addProduct);
 
 router.get("/", getProducts);
+router.delete("/delete/:id", deleteProduct);
+router.delete("/delete-all", deleteAllProducts);
 
 export default router;

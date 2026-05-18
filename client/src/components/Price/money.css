@@ -51,83 +51,205 @@ img {
 }
 
 /* HERO */
-.hero {
+
+.premium-hero {
   position: relative;
   width: 100%;
-  height: 80vh;
-  min-height: 400px;
-
-  background-image: url("/ChatGPT Image May 18, 2026, 01_05_05 PM.png");
-  background-size: cover;         /* fills screen */
-  background-position: center;    /* keeps focus center */
+  min-height: 80vh;
+  background-image: url("ChatGPT Image May 18, 2026, 03_18_06 PM.png");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 60px 7%;
+  overflow: hidden;
+}
 
+.hero-left-content {
+  width: 43%;
+  text-align: center;
+  color: #2b160e;
+  margin-right: 40px;
+}
+
+.top-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 45vh;
-    min-height: 260px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #fff;
-  }
+  gap: 15px;
 }
 
-@media (max-width: 480px) {
-  .hero {
-    background-image: url("/ChatGPT Image May 18, 2026, 01_59_51 PM.png");
-    background-size: cover;         /* fills screen */
-  background-position: center;    /* keeps focus center */
-  background-repeat: no-repeat;
-   height: 70vh;
-    background-color: #fff;
-  }
+.top-icon span {
+  width: 80px;
+  height: 2px;
+  background: #b81414;
 }
 
-/* .hero-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.618);
-} */
-
-.hero-content {
-  position: relative;
-  color: white;
-  text-align: center;
+.top-icon p {
+  font-size: 28px;
+  margin: 0;
 }
 
-.hero-content h1 {
-  font-size: 120px;
-  color: #ffffff;
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: fadeUp 1.2s ease-out forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-content p {
+.hero-left-content h6 {
+  font-family:  sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
   margin: 15px 0;
+  color: #2b160e;
+  font-weight: 800;
 }
 
-.hero-content button {
-  background: #ff9800;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  color: white;
-  cursor: pointer;
+.hero-left-content h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 78px;
+  line-height: 0.95;
+  margin: 10px 0;
+  color: #2b160e;
+  letter-spacing: 2px;
 }
+
+.hero-left-content h1 span {
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: block;
+  color: #b41414;
+  font-size: 88px;
+}
+
+.hero-line {
+  width: 85%;
+  height: 2px;
+  background: #b41414;
+  margin: 20px auto;
+}
+
+.hero-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2b160e;
+}
+
+.hero-tags p {
+  margin: 0;
+}
+
+.hero-tags span {
+  color: #b41414;
+}
+
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.hero-features .circle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #b41414;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.hero-features p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0;
+  color: #2b160e;
+}
+
+.hero-ribbon {
+  margin: 35px auto 0;
+  background: #b41414;
+  color: white;
+  padding: 12px 25px;
+  font-size: 22px;
+  font-style: italic;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.quality-badge {
+  position: absolute;
+  top: 0;
+  right: 80px;
+  width: 150px;
+  height: 220px;
+  background: #b41414;
+  color: #fff;
+  text-align: center;
+  padding-top: 45px;
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 68%, 0 82%);
+}
+
+.quality-badge p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.quality-badge span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .premium-hero {
+    min-height: 90vh;
+    padding: 40px 20px;
+    background-position: center right;
+  }
+
+  .hero-left-content {
+    width: 100%;
+    background: rgba(255,255,255,0.82);
+    padding: 25px 15px;
+    border-radius: 20px;
+  }
+
+  .hero-left-content h4 {
+    font-size: 18px;
+  }
+
+  .hero-left-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-left-content h1 span {
+    font-size: 52px;
+  }
+
+  .hero-tags {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .hero-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-ribbon {
+    font-size: 15px;
+  }
+
+  .quality-badge {
+    display: none;
+  }
+}
+
+
 
 /* PRICE */
 .price-section {
@@ -169,7 +291,8 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin-top: 30px;
-  margin-left: 80px;
+  
+  margin-left: 30px;
 }
 
 .card {
@@ -180,7 +303,7 @@ img {
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   margin-bottom: 50px;
   padding: 20px;
-  width: 200px;
+  width: 300px;
 }
 
 .card:hover {
@@ -189,7 +312,7 @@ img {
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   
 }
 
